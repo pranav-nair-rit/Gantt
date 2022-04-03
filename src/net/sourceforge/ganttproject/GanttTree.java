@@ -525,7 +525,7 @@ public class GanttTree
   }
 
   /** Return all task exept the task in parameter */
-  // BUG: Use equals method instead of == and !=
+  
   public String[] getAllTaskString(String except) {
     ArrayList l = getAllTasks();
     String[] res;
@@ -538,7 +538,7 @@ public class GanttTree
     }
     int i = 0, j = 0;
     for (; i < l.size(); i++) {
-      if (except == null || (l.get(i).toString() != except)) {
+      if (except.equals(null) || !(l.get(i).toString().equals(except))) {
         Array.set(res, j, l.get(i).toString());
         j++;
       }

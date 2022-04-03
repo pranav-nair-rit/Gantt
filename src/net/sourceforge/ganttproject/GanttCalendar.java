@@ -27,7 +27,7 @@ import net.sourceforge.ganttproject.time.gregorian.GregorianCalendar;
 /** 
   * Class use for calendar
   */
-public class GanttCalendar extends GregorianCalendar implements Serializable, Comparable
+public class GanttCalendar extends GregorianCalendar implements Serializable
 {
 	private GanttLanguage language = GanttLanguage.getInstance();
     private boolean isFixed;
