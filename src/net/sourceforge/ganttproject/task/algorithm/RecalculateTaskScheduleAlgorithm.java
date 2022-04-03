@@ -89,7 +89,7 @@ public abstract class RecalculateTaskScheduleAlgorithm extends AlgorithmBase {
         //System.err.println("[RecalculateTaskSchedule] <<<fulfilDependencies()");
     }
 
-    // 
+    //
     private void fulfilConstraints(TaskDependency dependency) throws TaskDependencyException {
         Task dependant = dependency.getDependant();
         TaskDependency[] depsAsDependant = dependant.getDependenciesAsDependant().toArray();
