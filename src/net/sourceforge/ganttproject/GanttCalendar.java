@@ -98,7 +98,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 	}
 
 	/**  Return the date to A string */
-	// 
+	//
 	public String toString ()
 	{
 		return language.formatDate(this);
@@ -229,17 +229,20 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 	public int compareTo (GanttCalendar when)
 	{
 		int[] comparissons = { Calendar.YEAR , Calendar.MONTH , Calendar.DATE };
+		int result = 0;
 	  	for (int i = 0; i < comparissons.length ; i++){
 	  	  switch (module(this.get(comparissons[i]) - when.get(comparissons[i]))){
 	  	  case -1:
-	  	    return -1;
+	  	    result = -1;
+	  	    break;
 	  	  case 1:
-	  	    return 1;
+	  	    result = 1;
+	  	    break;
 	  	  default:	  		  
 	  	    break;
 	  	  }
 	  	}	  	
-	  	return 0; 
+	  	return result;
 	}
 	
 	
