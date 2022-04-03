@@ -181,12 +181,12 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 		if(this.compareTo(d)==0) return res;
 		
 		else if(compareTo(d)<0) {
-			d1 = this.Clone();
+			d1 = this.clone();
 			d2 = new GanttCalendar(d);
 		}
 		else {
 			d1 = new GanttCalendar(d);
-			d2 = this.Clone();
+			d2 = this.clone();
 		}
 
 		while(d1.compareTo(d2)!=0)
@@ -225,7 +225,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 	  * @return 1 if the date is after when
 	  */
 
-	// BUG: There should be only one return statement
+	//
 	public int compareTo (GanttCalendar when)
 	{
 		int[] comparissons = { Calendar.YEAR , Calendar.MONTH , Calendar.DATE };
