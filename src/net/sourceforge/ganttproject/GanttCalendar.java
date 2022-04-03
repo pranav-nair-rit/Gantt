@@ -89,6 +89,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	  }
 
 	/** Return a clone of the calendar */
+	// BUG: Change the method name to clone()
 	public GanttCalendar Clone()
 	{
 		GanttCalendar clone = new GanttCalendar(getYear(), getMonth(), getDay());
