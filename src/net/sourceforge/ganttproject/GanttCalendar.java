@@ -68,7 +68,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	  // BUG: Use the Integer.valueOf() method to read year, month and date instead of instantiating an Integer object
+	  // 
 	  public static GanttCalendar parseXMLDate(String s)
 	  {
 		  GanttCalendar tmp = new GanttCalendar();
@@ -81,9 +81,9 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 		  String y = s.substring(sb+1);
 			
 		  //Set the date
-		  tmp.set(Calendar.YEAR, new Integer(y).hashCode());
-		  tmp.set(Calendar.MONTH, new Integer(m).hashCode()-1);
-		  tmp.set(Calendar.DATE, new Integer(d).hashCode());
+		  tmp.set(Calendar.YEAR, Integer.valueOf(y).hashCode());
+		  tmp.set(Calendar.MONTH, Integer.valueOf(m).hashCode()-1);
+		  tmp.set(Calendar.DATE, Integer.valueOf(d).hashCode());
 		  
 		  return tmp;
 	  }

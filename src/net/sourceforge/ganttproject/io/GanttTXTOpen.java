@@ -66,7 +66,7 @@ public class GanttTXTOpen {
 	}
 	
 	/** Load tasks list from a text file. */
-	// 
+	//
 	public boolean load(File f)
 	{		
 		try {
