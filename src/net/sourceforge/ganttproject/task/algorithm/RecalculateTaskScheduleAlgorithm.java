@@ -89,7 +89,7 @@ public abstract class RecalculateTaskScheduleAlgorithm extends AlgorithmBase {
         //System.err.println("[RecalculateTaskSchedule] <<<fulfilDependencies()");
     }
 
-    // BUG: Change the type of comparison operator on line number 130.
+    // 
     private void fulfilConstraints(TaskDependency dependency) throws TaskDependencyException {
         Task dependant = dependency.getDependant();
         TaskDependency[] depsAsDependant = dependant.getDependenciesAsDependant().toArray();
@@ -127,7 +127,7 @@ public abstract class RecalculateTaskScheduleAlgorithm extends AlgorithmBase {
             GanttCalendar solution;
             GanttCalendar earliestStart = (GanttCalendar) (startEarlierVariations.size()==0 ?
                     null : startEarlierVariations.get(0));
-            GanttCalendar latestStart = (GanttCalendar) (startLaterVariations.size()>=0 ?
+            GanttCalendar latestStart = (GanttCalendar) (startLaterVariations.size()>0 ?
                     startLaterVariations.get(startLaterVariations.size()-1) : null);
             if (earliestStart==null && latestStart==null) {
                 solution = dependant.getStart();

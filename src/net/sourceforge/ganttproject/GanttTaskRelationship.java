@@ -132,7 +132,7 @@ public class GanttTaskRelationship {
     this.relationshipType = relationshipType;
   }
 
-  // 
+  //
   public boolean equals(Object object) {
     if(!(object instanceof GanttTaskRelationship)) {
       return false;
