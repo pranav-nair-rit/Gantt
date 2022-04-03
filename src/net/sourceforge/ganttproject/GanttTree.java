@@ -319,24 +319,25 @@ public class GanttTree
   }*/
 
   /** add an object with the expand information */
-  // BUG: Initialise boolean variable inside the if loop.
+  //
   public DefaultMutableTreeNode addObjectWithExpand(Object child,
         DefaultMutableTreeNode parent) {
   	
   	DefaultMutableTreeNode childNode =
 		new DefaultMutableTreeNode(child);
 
-	if (parent == null)  parent = rootNode;
+      boolean res = true;
+
+	if (parent == null)  {
+	    parent = rootNode;
+	    res = false;
+    }
 
 	treeModel.insertNodeInto(childNode, parent, parent.getChildCount());
 	forwardScheduling();
   	
 	Task task = (Task)(childNode.getUserObject());
 
-	boolean res = true;
-	
-	if (parent == null) res = false;
-	 
 	//test for expantion
 	while (parent != null) {
 	   Task taskFather = (Task)(parent.getUserObject()); 
@@ -525,7 +526,7 @@ public class GanttTree
   }
 
   /** Return all task exept the task in parameter */
-  
+
   public String[] getAllTaskString(String except) {
     ArrayList l = getAllTasks();
     String[] res;
