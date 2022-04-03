@@ -132,8 +132,17 @@ public class GanttTaskRelationship {
     this.relationshipType = relationshipType;
   }
 
-  // BUG: Use object of type Object as actual parameter.
-  public boolean equals(GanttTaskRelationship compareRel) {
+  // 
+  public boolean equals(Object object) {
+    if(!(object instanceof GanttTaskRelationship)) {
+      return false;
+    }
+
+    if(object==this) {
+      return true;
+    }
+
+    GanttTaskRelationship compareRel = (GanttTaskRelationship) object;
 	return relationshipType  == compareRel.relationshipType &&
            predecessorTaskID == compareRel.predecessorTaskID &&
            successorTaskID   == compareRel.successorTaskID;
