@@ -224,6 +224,8 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	  * @return -1 if the date is before when
 	  * @return 1 if the date is after when
 	  */
+
+	// BUG: There should be only one return statement
 	public int compareTo (GanttCalendar when)
 	{
 		int[] comparissons = { Calendar.YEAR , Calendar.MONTH , Calendar.DATE };
