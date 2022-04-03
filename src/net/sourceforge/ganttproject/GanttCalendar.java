@@ -67,6 +67,8 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+	  // BUG: Use the Integer.valueOf() method to read year, month and date instead of instantiating an Integer object
 	  public static GanttCalendar parseXMLDate(String s)
 	  {
 		  GanttCalendar tmp = new GanttCalendar();
