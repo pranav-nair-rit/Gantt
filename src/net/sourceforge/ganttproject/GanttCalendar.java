@@ -98,6 +98,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	}
 
 	/**  Return the date to A string */
+	// BUG: Remove the parentheses from the return statement
 	public String toString ()
 	{
 		return (language.formatDate(this));
