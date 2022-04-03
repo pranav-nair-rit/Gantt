@@ -89,7 +89,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 	  }
 
 	/** Return a clone of the calendar */
-	// 
+	//
 	public GanttCalendar clone()
 	{
 		GanttCalendar clone = new GanttCalendar(getYear(), getMonth(), getDay());
@@ -98,10 +98,10 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 	}
 
 	/**  Return the date to A string */
-	// BUG: Remove the parentheses from the return statement
+	// 
 	public String toString ()
 	{
-		return (language.formatDate(this));
+		return language.formatDate(this);
 	}
 	
 	public String toXMLString() {
