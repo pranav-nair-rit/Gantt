@@ -66,6 +66,7 @@ public class GanttTXTOpen {
 	}
 	
 	/** Load tasks list from a text file. */
+	// BUG: Not checking if the line read is null in case there are no more lines to be read on line 81.
 	public boolean load(File f)
 	{		
 		try {
