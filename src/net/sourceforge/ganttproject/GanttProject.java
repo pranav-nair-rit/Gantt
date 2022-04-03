@@ -1924,6 +1924,7 @@ public class GanttProject
 	}
 	
 	/** Print the project */
+	// BUG: Remove the GanttExportSettings object instantiated in the variable bool
 	public void printProject() {
 		if (tabpane.getSelectedIndex() == 0) {//Gantt Chart
 			GanttExportSettings bool = new GanttExportSettings();
