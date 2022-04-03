@@ -89,6 +89,7 @@ public abstract class RecalculateTaskScheduleAlgorithm extends AlgorithmBase {
         //System.err.println("[RecalculateTaskSchedule] <<<fulfilDependencies()");
     }
 
+    // BUG: Change the type of comparison operator on line number 130.
     private void fulfilConstraints(TaskDependency dependency) throws TaskDependencyException {
         Task dependant = dependency.getDependant();
         TaskDependency[] depsAsDependant = dependant.getDependenciesAsDependant().toArray();
