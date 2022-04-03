@@ -68,7 +68,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	  // 
+	  //
 	  public static GanttCalendar parseXMLDate(String s)
 	  {
 		  GanttCalendar tmp = new GanttCalendar();
@@ -89,8 +89,8 @@ public class GanttCalendar extends GregorianCalendar implements Serializable
 	  }
 
 	/** Return a clone of the calendar */
-	// BUG: Change the method name to clone()
-	public GanttCalendar Clone()
+	// 
+	public GanttCalendar clone()
 	{
 		GanttCalendar clone = new GanttCalendar(getYear(), getMonth(), getDay());
         clone.setFixed(isFixed());
