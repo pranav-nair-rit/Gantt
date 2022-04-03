@@ -319,6 +319,7 @@ public class GanttTree
   }*/
 
   /** add an object with the expand information */
+  // BUG: Initialise boolean variable inside the if loop.
   public DefaultMutableTreeNode addObjectWithExpand(Object child,
         DefaultMutableTreeNode parent) {
   	
