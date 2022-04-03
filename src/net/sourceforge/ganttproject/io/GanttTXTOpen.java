@@ -66,7 +66,7 @@ public class GanttTXTOpen {
 	}
 	
 	/** Load tasks list from a text file. */
-	// BUG: Not checking if the line read is null in case there are no more lines to be read on line 81.
+	// 
 	public boolean load(File f)
 	{		
 		try {
@@ -79,7 +79,7 @@ public class GanttTXTOpen {
 				String sTaskName = br.readLine();
 				
 				//The test is used to skip the white line (with no text)
-				if(!sTaskName.equals(""))
+				if((sTaskName!=null) && (!sTaskName.equals("")))
 				{
 					//Create the task
 					GanttTask task = myTaskManager.createTask();

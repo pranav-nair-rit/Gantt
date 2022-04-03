@@ -1924,7 +1924,7 @@ public class GanttProject
 	}
 	
 	/** Print the project */
-	// 
+	//
 	public void printProject() {
 		if (tabpane.getSelectedIndex() == 0) {//Gantt Chart
 			//GanttDialogExport gde = new GanttDialogExport(this, bool, language);
